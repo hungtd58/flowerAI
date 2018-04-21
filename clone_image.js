@@ -36,7 +36,7 @@ fs.readFile('flowers.json', 'utf8', function (err, data) {
 
 function clone(flowers, i){
   return function(){
-    var folder = flowers[i].name..split(' ').join('_');
+    var folder = flowers[i].name.split(' ').join('_');
     var dir = './data/' + flowers[i].name;
     if (!fs.existsSync(dir)){
       fs.mkdir(dir, err => console.error(err));
