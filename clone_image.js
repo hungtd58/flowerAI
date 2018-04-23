@@ -46,7 +46,7 @@ function clone(flowers, i){
     for(var j = 0; j < flowers[i].images.length; j++){
       var img = flowers[i].images[j];
       var fileName = dir + "/img_" + j + ".jpg";
-      download(img.thumbnail + "&w=224&h=224", fileName, function(){
+      download(img.image, fileName, function(){
         console.log("Downloaded");
       })
     }
